@@ -2,8 +2,21 @@ function ModuleName() {
   // store context for root Module
   let self = this
 
+  // functions that carry out a specific task within the Module
+  // called only within this module
+  let _helpers = {
+    helperFunction: _ => {}
+  }
+
+  // native functions to query various aspects of the Module
+  // can retrieve data or retrieve states(booleans)
+  let _queries = {
+    queryName: _ => {},
+    // ...
+  }
+
   // private variables hashes
-  // _private variables are never accessed directly outside this Module
+  // _private variables are accessed only within this Module
   // _public variables can be accessed from outside this module
   let _private = {
     variableName: '',
@@ -34,13 +47,6 @@ function ModuleName() {
   // native functions used to control module
   // they are expossed as attributes of the Module
   let _viewFnControls = {
-    controlname: _ => {},
-    // ...
-  }
-
-  // native functions to query various aspects of the Module
-  // can retrieve data or retrieve states(booleans)
-  let _statusChecks = {
     controlname: _ => {},
     // ...
   }
